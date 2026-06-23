@@ -25,42 +25,16 @@ const Contact: React.FC = () => {
     }));
   };
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true);
-
-  //   emailjs
-  //     .send(
-  //       "service_98fxtyb", // replace with your EmailJS service ID
-  //       "template_efvl8dc", // replace with your EmailJS template ID
-  //       formData,
-  //       "GI2b1TLSRToA66Oqn" // replace with your EmailJS public key
-  //     )
-  //     .then(
-  //       () => {
-  //         setIsSubmitting(false);
-  //         setSubmitSuccess(true);
-  //         setFormData({ name: "", email: "", subject: "", message: "" });
-  //         setTimeout(() => setSubmitSuccess(false), 5000);
-  //       },
-  //       () => {
-  //         setIsSubmitting(false);
-  //         setSubmitError(true);
-  //         setTimeout(() => setSubmitError(false), 5000);
-  //       }
-  //     );
-  // };
-
   const handleSubmit = (e: React.FormEvent) => {
   e.preventDefault();
   setIsSubmitting(true);
 
   emailjs
     .send(
-      "service_98fxtyb", // your EmailJS service ID
-      "template_efvl8dc", // your EmailJS template ID
+      "", // your EmailJS service ID
+      "", // your EmailJS template ID
       formData,           // the form data
-      "GI2b1TLSRToA66Oqn" // your EmailJS public key
+      "" // your EmailJS public key
     )
     .then(
       (res) => {
